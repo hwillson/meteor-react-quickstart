@@ -1,7 +1,9 @@
 import React from 'react';
 
-export const Widgets = () => (
+const Widgets = () => (
   <div className="widgets">
     Widgets!
   </div>
 );
+
+export default Widgets;

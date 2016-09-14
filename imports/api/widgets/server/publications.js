@@ -1,3 +1,5 @@
+/* eslint-disable prefer-arrow-callback */
+
 import { Meteor } from 'meteor/meteor';
 
 import { Widgets } from '../collection.js';

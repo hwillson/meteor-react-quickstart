@@ -1,3 +1,5 @@
 import { Mongo } from 'meteor/mongo';
 
-export const Widgets = new Mongo.Collection('widgets');
+const Widgets = new Mongo.Collection('widgets');
+
+export default Widgets;
