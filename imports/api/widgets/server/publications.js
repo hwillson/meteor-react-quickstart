@@ -2,8 +2,8 @@
 
 import { Meteor } from 'meteor/meteor';
 
-import { Widgets } from '../collection.js';
+import widgetsCollection from '../collection';
 
 Meteor.publish('widgets', function publishWidgets() {
-  return Widgets.find();
+  return widgetsCollection.find();
 });

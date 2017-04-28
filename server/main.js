@@ -1,1 +1,1 @@
-import '../imports/api/widgets/server/publications';
+import '../imports/startup/server';
