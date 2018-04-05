@@ -1,10 +1,10 @@
 import { Meteor } from 'meteor/meteor';
-import { createContainer } from 'meteor/react-meteor-data';
+import { withTracker } from 'meteor/react-meteor-data';
 
 import widgetsCollection from '../../api/widgets/collection';
-import Widgets from '../components/Widgets';
+import Widgets from './Widgets';
 
-const WidgetsContainer = createContainer(() => {
+const WidgetsContainer = withTracker(() => {
   const widgetsHandle = Meteor.subscribe('widgets');
   const widgets = widgetsCollection.find().fetch();
 
@@ -12,6 +12,6 @@ const WidgetsContainer = createContainer(() => {
     widgetsReady: widgetsHandle.ready(),
     widgets,
   };
-}, Widgets);
+})(Widgets);
 
 export default WidgetsContainer;

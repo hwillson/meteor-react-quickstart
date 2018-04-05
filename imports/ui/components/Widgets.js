@@ -11,7 +11,10 @@ const Widgets = ({ widgets }) => (
 );
 
 Widgets.propTypes = {
-  widgets: PropTypes.array.isRequired,
+  widgets: PropTypes.arrayOf(PropTypes.shape({
+    _id: PropTypes.string,
+    name: PropTypes.string,
+  })).isRequired,
 };
 
 export default Widgets;
